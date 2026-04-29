@@ -1,0 +1,18 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/Editor/CMS/CMS_Style.uss?fileID=7433441132597879392&amp;guid=da56aebea98e347449e7e8e6e35c5ac3&amp;type=3#CMS_Style"/>
+    <ui:VisualElement name="ROOT" style="flex-grow: 1;">
+        <ui:TextField label="Asset Name" name="AssetNameField" is-delayed="true" placeholder-text="New Entity" style="-unity-font-style: bold; margin-left: 16px; margin-right: 16px; margin-top: 2px; margin-bottom: 2px;"/>
+        <ui:EnumField label="Entity Key" value="Dummy" type="Constant.Enums.Entities, Assembly-CSharp" name="EntityKeyEnum" include-obsolete-values="false" style="margin-left: 16px; margin-top: 2px; margin-right: 16px; margin-bottom: 2px;"/>
+        <ui:ListView name="EntitySystemsList" show-foldout-header="true" header-title="Systems" allow-add="false" allow-remove="false" show-bound-collection-size="false" show-border="true" fixed-item-height="16" style="margin-left: 16px; margin-right: 16px;"/>
+        <ui:Button text="Add System" name="AddSystemButton" focusable="false" style="align-self: center; margin-left: 16px; padding-left: 32px; padding-right: 32px; padding-top: 2px; padding-bottom: 2px; margin-bottom: 4px; margin-right: 16px; margin-top: 6px; visibility: visible;"/>
+        <ui:VisualElement name="SystemInspectorContent" style="flex-grow: 1; margin-top: 0; margin-bottom: 0; margin-left: 0; margin-right: 0;">
+            <ui:VisualElement name="SystemSearchWindow" style="flex-grow: 1; position: absolute; left: 25%; right: 25%; border-top-color: rgb(13, 13, 13); border-left-color: rgb(33, 33, 33); border-bottom-color: rgb(33, 33, 33); border-right-color: rgb(33, 33, 33); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-top-left-radius: 6px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; border-bottom-left-radius: 6px; visibility: visible;">
+                <ui:ListView name="AllSystemsList" allow-add="false" allow-remove="false" show-foldout-header="false" show-bound-collection-size="false" header-title="" show-border="true" fixed-item-height="10" focusable="false" style="-unity-font-style: italic; font-size: 10px; flex-grow: 1; background-color: rgb(42, 42, 42); color: rgb(236, 236, 236);"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="BottomPanel" style="flex-grow: 0; height: 24px; width: 100%; border-top-width: 4px; border-left-color: rgba(42, 42, 42, 0.55); border-right-color: rgba(42, 42, 42, 0.55); border-top-color: rgba(42, 42, 42, 0.55); border-bottom-color: rgba(42, 42, 42, 0.55); flex-direction: row-reverse; justify-content: space-between;">
+            <ui:Button text=" Delete Entity" name="DeleteEntityButton" focusable="false" style="-unity-font-style: bold; margin-left: 0; padding-left: 4px; padding-right: 4px; margin-right: 0; padding-top: 0; margin-top: 0; margin-bottom: 0; padding-bottom: 0; color: rgb(255, 73, 73);"/>
+            <ui:Button text="Spawn Entity" name="SpawnEntityButton" style="-unity-font-style: bold; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 4px; padding-bottom: 0; padding-left: 4px;"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
